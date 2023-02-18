@@ -1,26 +1,38 @@
 #include <stdio.h>
 
 /**
-* main - Main program function
-* Return: 0 if no problem appear
-*/
+ * main - Entry point
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
-	for (int i = 48; i <= 57; i++)
-		for (int j = i + 1; j <= 57; j++)
-			for (int k = j + 1; k <= 57; k++)
-			{
-				putchar(i);
-				putchar(j);
-				putchar(k);
-				if ((i != 55) || (j != 56) || (k != 57))
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
+int i, n, j;
 
-	putchar('\n');
-	return (0);
+for (i = 48; i < 58; i++)
+{
+for (n = 48; n < 58; n++)
+{
+if (n > i)
+{
+for (j = 48; j < 58; j++)
+{
+if (j > n)
+{
+putchar(i);
+putchar(n);
+putchar(j);
+if (i == 55 && n == 56 && j == 57)
+{
+break;
+}
+putchar(',');
+putchar(' ');
+}
+}
+}
+}
+}
+putchar('\n');
+return (0);
 }

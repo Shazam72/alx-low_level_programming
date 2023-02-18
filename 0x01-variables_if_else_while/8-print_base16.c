@@ -1,18 +1,26 @@
 #include <stdio.h>
 
 /**
-* main - Main program function
-* Return: 0 if no problem appear
-*/
+ * main - Entry point
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
-	for (int i = 48; i <= 57; i++)
-		putchar(i);
-
-	for (char c = 'a'; c <= 'f'; c++)
-		putchar(c);
-
-	putchar('\n');
-	return (0);
+char c = 'a';
+int num = 0;
+for (num = 0; num < 16; num++)
+{
+if (num < 10)
+{
+putchar(num + '0');
+}
+else
+{
+putchar(c);
+c++;
+}
+}
+putchar('\n');
+return (0);
 }

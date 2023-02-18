@@ -1,22 +1,22 @@
 #include <stdio.h>
 
 /**
-* main - Main program function
-* Return: 0 if no problem appear
-*/
+ * main - Entry point
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
-	for (int i = 48; i <= 48 + 9; i++)
-	{
-		putchar(i);
-		if (i < 48 + 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-	}
-
-	putchar('\n');
-	return (0);
+int number;
+for (number = 0; number <= 9; number++)
+{
+putchar(number + '0');
+if (number < 9)
+{
+putchar(',');
+putchar(' ');
+}
+}
+putchar('\n');
+return (0);
 }

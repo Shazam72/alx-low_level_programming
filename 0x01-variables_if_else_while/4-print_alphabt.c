@@ -1,16 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - Main program function
- * Return: 0 if no problem appear
+ * main - Entry point
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	for (int i = 97; i < (97 + 26); i++)
-		if (i != 101 && i != 113)
-			putchar(i);
-
-	putchar('\n');
-	return (0);
+char c;
+for (c = 'a'; c <= 'z'; c++)
+{
+if (c != 'q' && c != 'e')
+{
+putchar(c);
+}
+}
+putchar('\n');
+return (0);
 }
