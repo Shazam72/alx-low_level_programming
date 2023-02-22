@@ -15,10 +15,13 @@ void times_table(void)
 		{
 			int result = i * j;
 
-			if (result > 9)
+			if (j == 0)
+				goto print_last_digit;
+			else if (result > 9)
 				_putchar(48 + result / 10);
 			else
 				_putchar(' ');
+print_last_digit:
 			_putchar(48 + result % 10);
 
 			if (j == 9)
