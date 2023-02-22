@@ -1,14 +1,32 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * add - function that adds two integers and returns the result
+ * print_to_98 - prints numbers to 98
+ * @n: starting integer
  *
- * @num1: first operand
- * @num2: second operand
+ * Description: prints all natural number from n - 98
  *
- * Return: the value of the addition of the two provided integer
+ * Return: void
  */
-int add(int num1, int num2)
+
+void print_to_98(int n)
 {
-	return (num1 + num2);
+	if (n < 98)
+	{
+		while (n < 98)
+		{
+			printf("%d, ", n);
+			n++;
+		}
+	}
+	else if (n > 98)
+	{
+		while (n > 98)
+		{
+			printf("%d, ", n);
+			n--;
+		}
+	}
+	printf("98\n");
 }
