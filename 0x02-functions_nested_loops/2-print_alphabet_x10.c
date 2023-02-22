@@ -7,9 +7,10 @@
 void print_alphabet_x10(void)
 {
 	int i = 10;
+	int j = 0;
 
 	do {
-		for (int j = 97; j < 97 + 26; j++)
+		for (j = 97; j < 97 + 26; j++)
 			_putchar(j);
 		_putchar('\n');
 		i--;
