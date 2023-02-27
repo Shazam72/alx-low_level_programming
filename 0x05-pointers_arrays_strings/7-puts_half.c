@@ -30,7 +30,7 @@ return (count - 1);
 void puts_half(char *str)
 {
 	int length = _strlen(str);
-	int i = (length % 2 != 0 ? length / 2 : (length - 1) / 2) + 1;
+	int i = (length  / 2) + 1;
 
 	for (; i <= length; i++)
 		_putchar(str[i]);
