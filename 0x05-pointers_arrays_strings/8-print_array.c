@@ -13,6 +13,7 @@ void print_array(int *a, int n)
 	int i = 0;
 
 	for (; i < n; i++)
-		printf("%d%s", a[i], (i == n) ? "" : ", ");
+		if (i >= 0)
+			printf("%d%s", a[i], (i == n) ? "" : ", ");
 	_putchar('\n');
 }
