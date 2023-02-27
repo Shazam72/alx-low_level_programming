@@ -18,7 +18,7 @@ count++;
 pt_string++;
 }
 
-return (count);
+return (count - 1);
 }
 /**
  *rev_string - Write a function that reverses a string

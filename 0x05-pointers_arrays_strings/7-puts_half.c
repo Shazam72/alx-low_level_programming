@@ -18,7 +18,7 @@ count++;
 pt_string++;
 }
 
-return (count);
+return (count - 1);
 }
 /**
  *puts_half - function that prints half a string

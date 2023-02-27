@@ -17,7 +17,7 @@ count++;
 pt_string++;
 }
 
-return (count);
+return (count - 1);
 }
 /**
  *_strcpy - function that copies a string to another
