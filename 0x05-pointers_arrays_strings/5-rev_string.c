@@ -28,7 +28,7 @@ return (count - 1);
 
 void rev_string(char *s)
 {
-	int str_length = _strlen(s) - 1;
+	int str_length = _strlen(s);
 	int i = 0;
 
 	for (i = (str_length + str_length % 2) / 2; i >= 0; i--)
