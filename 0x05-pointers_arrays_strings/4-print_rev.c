@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 *_strlen - function that returns the length of a string
 *
@@ -19,23 +20,19 @@ pt_string++;
 
 return (count);
 }
+
 /**
- *_strcpy - function that copies a string to another
+ *print_rev - function that prints a string in reverse
+ *followed by a new line, to stdout
  *
- *@dest: destination where to copy
- *@src: source string
- *
- * Return: a pointer to the destination
+ *@s: reference to the string to print
  */
 
-char *_strcpy(char *dest, char *src)
+void print_rev(char *s)
 {
-	int i = 0;
+	int i = _strlen(s);
 
-	for (; i < _strlen(src); i++)
-		dest[i] = src[i];
-
-	dest[i] = '\0';
-
-	return (dest);
+	for (; i >= 0; i--)
+		_putchar(s[i]);
+	_putchar('\n');
 }
