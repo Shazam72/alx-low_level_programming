@@ -1,29 +1,51 @@
-#include <stdlib.h>
-#include <string.h>
+#include "main.h"
+
 /**
- * string_nconcat - function that concatenates two strings
- * @s1: first operand
- * @s2: second operand
- * @n: number of bytes to copy from the second operand
- * Return: pointer to the newly allocated memory
+ * string_nconcat - concatenates two strings.
+ * @s1: first string
+ * @s2: second string
+ * @n: index
+ * Return: char pointer
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	void *pt;
-	unsigned int length_s2 = 0;
+	char *p;
+	unsigned int size1 = 0, size2 = 0, i;
 
 	if (s1 == NULL)
 		s1 = "";
+
 	if (s2 == NULL)
 		s2 = "";
-	length_s2 = strlen(s2);
-	if (n >= length_s2)
-		n = length_s2;
-	pt = malloc(sizeof(char) * (strlen(s1) + n) + 1);
-	strcat(pt, s1);
-	strncat(pt, s2, n);
-	if (pt == NULL)
-		return (NULL);
-	return (pt);
+
+	while (s1[size1] != '\0')
+	{
+		size1++;
+	}
+
+	while (s2[size2] != '\0')
+	{
+		size2++;
+	}
+
+	if (n > size2)
+	n = size2;
+	p = malloc((size1 + n + 1) * sizeof(char));
+
+	if (p == NULL)
+		return (0);
+
+	for (i = 0; i < size1; i++)
+	{
+		p[i] = s1[i];
+	}
+
+	for (; i < (size1 + n); i++)
+	{
+		p[i] = s2[i - size1];
+	}
+	p[i] = '\0';
+
+return (p);
 }
