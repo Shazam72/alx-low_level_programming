@@ -24,7 +24,7 @@ int main(void)
 	add_nodeint_end(&head, 1024);
 	print_listint(head);
 	printf("-----------------\n");
-	pt = insert_nodeint_at_index(&head, 12, 4096);
+	pt = insert_nodeint_at_index(&head, -12, 4096);
 	printf("Nous eumes %p", pt);
 	print_listint(head);
 	free_listint2(&head);
