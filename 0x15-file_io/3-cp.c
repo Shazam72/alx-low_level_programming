@@ -12,7 +12,7 @@
  * @argv: array that contains command line arguments
  * Return: 0 if no problem appear
  */
-int main(int argc, char __attribute__((__unused__)) *argv[])
+int main(int argc, char *argv[])
 {
 	int fd_input = 0, fd_output = 0, read_res = 0;
 	char *buffer;
@@ -35,10 +35,9 @@ int main(int argc, char __attribute__((__unused__)) *argv[])
 		exit(99);
 	}
 	buffer = (char *)malloc(sizeof(*buffer) * BUFFER_LIMIT);
-	read_res = read(fd_input, buffer, BUFFER_LIMIT);
 	do {
 		read_res = read(fd_input, buffer, BUFFER_LIMIT);
-		write(fd_output, buffer, BUFFER_LIMIT);
+		write(fd_output, buffer, read_res);
 	} while (read_res != 0);
 	if (close(fd_input) == -1)
 	{
