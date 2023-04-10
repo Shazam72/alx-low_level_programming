@@ -63,6 +63,7 @@ int main(int argc, char *argv[])
 		if (write_res == -1)
 			exit_io("Error: Can't write to %s\n", argv[2], 99);
 	};
+	free(buffer);
 	err_close = close(fd_input);
 	if (err_close == -1)
 		exit_100(err_close);
