@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 	fd_input = open(argv[1], O_RDONLY);
 	if (fd_input == -1)
 		exit_io("Error: Can't read from file %s\n", argv[1], 98);
-	fd_output = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	fd_output = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_output == -1)
 		exit_io("Error: Can't write to %s\n", argv[2], 99);
 	buffer = (char *)malloc(sizeof(*buffer) * BUFFER_LIMIT);
