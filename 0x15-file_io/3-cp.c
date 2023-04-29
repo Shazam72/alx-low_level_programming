@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 			exit_io("Error: Can't read from file %s\n", argv[1], 98);
 		if (read_res == 0)
 			break;
-		write(fd_output, buffer, read_res);
+		write_res = write(fd_output, buffer, read_res);
 		if (write_res == -1)
 			exit_io("Error: Can't write to %s\n", argv[2], 99);
 	};
